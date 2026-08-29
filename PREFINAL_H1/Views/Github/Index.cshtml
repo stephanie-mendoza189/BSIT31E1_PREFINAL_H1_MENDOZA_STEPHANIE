@@ -1,0 +1,28 @@
+﻿@model PREFINAL_H1.Models.FilterModel
+
+@{
+    ViewData["Title"] = "GitHub Shipped Work Export";
+}
+
+<h2>GitHub Shipped Work CSV Generator</h2>
+
+<form asp-action="ExportCsv" method="post">
+    <div>
+        <label>Student Name (GitHub Username):</label><br />
+        <input asp-for="StudentName" required />
+    </div>
+    <div>
+        <label>Target Date:</label><br />
+        <input asp-for="TargetDate" required />
+    </div>
+    <div>
+        <label>GitHub Owner / Organization:</label><br />
+        <input asp-for="Owner" required />
+    </div>
+    <div>
+        <label>Repository Name:</label><br />
+        <input asp-for="Repository" required />
+    </div>
+    <br />
+    <button type="submit">Generate CSV</button>
+</form>
